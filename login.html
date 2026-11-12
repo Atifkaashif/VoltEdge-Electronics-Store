@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Log in — VoltEdge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="app.js"></script>
+</head>
+<body data-page="login">
+
+<div class="auth-wrap">
+  <aside class="auth-art">
+    <span class="eyebrow" style="background:rgba(255,255,255,.2);color:#fff;width:max-content;margin-bottom:18px">👋 Welcome back</span>
+    <h2>Log in to pick up right where you left off</h2>
+    <p>Your cart, wishlist and orders are waiting for you.</p>
+    <div class="auth-emojis" aria-hidden="true"><span>⌚</span><span>🎮</span><span>🔋</span></div>
+  </aside>
+  <div class="auth-form-side">
+    <div class="auth-card">
+      <h1>Log in</h1>
+      <p>Enter your details to access your account.</p>
+      <form id="loginForm">
+        <div class="field"><label for="email">Email</label><input class="input" type="email" id="email" required placeholder="you@example.com" autocomplete="email"></div>
+        <div class="field"><label for="password">Password</label>
+          <div class="pw-wrap"><input class="input" type="password" id="password" required placeholder="Your password" autocomplete="current-password">
+            <button type="button" class="pw-toggle" data-toggle-pw aria-label="Show password">👁</button></div></div>
+        <div class="row-between">
+          <label class="check"><input type="checkbox" checked> Remember me</label>
+          <a href="contact.html" style="color:var(--p);font-weight:700">Forgot password?</a>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Log in</button>
+      </form>
+      <div class="demo-box">
+        <b>Demo accounts</b> (click to fill)<br>
+        Admin: <button type="button" data-fill="admin@voltedge.com|admin123">admin@voltedge.com</button><br>
+        Customer: <button type="button" data-fill="demo@voltedge.com|demo123">demo@voltedge.com</button>
+      </div>
+      <p class="auth-alt">New to VoltEdge? <a href="register.html">Create an account</a></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

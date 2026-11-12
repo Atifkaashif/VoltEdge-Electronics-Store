@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VoltEdge — Premium Electronics Store</title>
+<meta name="description" content="Shop smartphones, laptops, audio, wearables and accessories at VoltEdge.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="app.js"></script>
+</head>
+<body data-page="home">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">⚡ Winter sale · Up to 40% off</span>
+      <h1>Tech that moves at the <span class="grad-text">speed of you</span></h1>
+      <p class="lead">Flagship phones, creator laptops, studio-grade audio and smart wearables — all in one place, with free delivery and a 2-year warranty.</p>
+      <div class="hero-cta">
+        <a href="shop.html" class="btn btn-primary">Shop Now →</a>
+        <a href="categories.html" class="btn btn-ghost">Browse Categories</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong data-count="50" data-suffix="K+">0</strong><span>Happy customers</span></div>
+        <div><strong data-count="1200" data-suffix="+">0</strong><span>Products</span></div>
+        <div><strong data-count="4" data-suffix=".9★">0</strong><span>Average rating</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="orb"></div>
+      <div class="device d1"><span>📱</span><small>Nova X Pro</small></div>
+      <div class="device d2"><span>🎧</span><small>SonicWave</small></div>
+      <div class="device d3"><span>💻</span><small>AeroBook 14</small></div>
+      <div class="device d4"><span>⌚</span></div>
+      <div class="floating-tag t1">🚚 Free shipping</div>
+      <div class="floating-tag t2">🛡️ 2-year warranty</div>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Nova</span><span>Aura</span><span>AeroBook</span><span>Titan</span><span>SonicWave</span><span>PulseBuds</span><span>ChronoFit</span><span>VoltCharge</span>
+    <span>Nova</span><span>Aura</span><span>AeroBook</span><span>Titan</span><span>SonicWave</span><span>PulseBuds</span><span>ChronoFit</span><span>VoltCharge</span>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Categories</span>
+      <h2>Shop by category</h2>
+      <p>Everything you need, neatly organised.</p>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-card reveal" style="--g1:#6366f1;--g2:#8b5cf6" href="shop.html?cat=smartphones"><div class="cat-icon">📱</div><h4>Smartphones</h4><small>3 items</small></a>
+      <a class="cat-card reveal" style="--g1:#0ea5e9;--g2:#6366f1" href="shop.html?cat=laptops"><div class="cat-icon">💻</div><h4>Laptops</h4><small>2 items</small></a>
+      <a class="cat-card reveal" style="--g1:#ec4899;--g2:#8b5cf6" href="shop.html?cat=audio"><div class="cat-icon">🎧</div><h4>Audio</h4><small>3 items</small></a>
+      <a class="cat-card reveal" style="--g1:#10b981;--g2:#06b6d4" href="shop.html?cat=wearables"><div class="cat-icon">⌚</div><h4>Wearables</h4><small>2 items</small></a>
+      <a class="cat-card reveal" style="--g1:#f59e0b;--g2:#ef4444" href="shop.html?cat=accessories"><div class="cat-icon">🔌</div><h4>Accessories</h4><small>2 items</small></a>
+      <a class="cat-card reveal" style="--g1:#ef4444;--g2:#8b5cf6" href="shop.html?cat=gaming"><div class="cat-icon">🎮</div><h4>Gaming</h4><small>1 item</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section alt" id="products">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Trending now</span>
+      <h2>Featured products</h2>
+      <p>Filter, search and sort — then add your favourites to the cart.</p>
+    </div>
+    <div class="toolbar">
+      <div class="chips" id="chips"></div>
+      <div class="tools">
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input id="q" class="input" type="search" placeholder="Search products…" aria-label="Search products">
+        </div>
+        <select id="sort" class="select" aria-label="Sort products">
+          <option value="featured">Sort: Featured</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+          <option value="rating">Top rated</option>
+        </select>
+      </div>
+    </div>
+    <div class="products" id="grid"></div>
+    <div style="text-align:center;margin-top:38px"><a href="shop.html" class="btn btn-ghost">View all products →</a></div>
+  </div>
+</section>
+
+<!-- DEAL -->
+<section class="section">
+  <div class="container">
+    <div class="deal reveal">
+      <div>
+        <span class="eyebrow">🔥 Deal of the day</span>
+        <h2>SonicWave ANC Headphones — now $249</h2>
+        <p>Adaptive noise cancelling and 40 hours of playtime. Offer ends tonight at midnight.</p>
+        <div class="countdown">
+          <div><strong id="cdH">00</strong><span>Hours</span></div>
+          <div><strong id="cdM">00</strong><span>Mins</span></div>
+          <div><strong id="cdS">00</strong><span>Secs</span></div>
+        </div>
+        <button class="btn btn-primary" id="dealBtn">Grab this deal →</button>
+      </div>
+      <div class="deal-art" aria-hidden="true">🎧</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Why VoltEdge</span><h2>Shopping, simplified</h2></div>
+    <div class="features">
+      <div class="card feature reveal"><div class="f-icon">🚚</div><h4>Free shipping</h4><p>Free express delivery on every order over $50.</p></div>
+      <div class="card feature reveal"><div class="f-icon">🛡️</div><h4>2-year warranty</h4><p>Genuine products backed by full manufacturer cover.</p></div>
+      <div class="card feature reveal"><div class="f-icon">↩️</div><h4>30-day returns</h4><p>Changed your mind? Return it, no questions asked.</p></div>
+      <div class="card feature reveal"><div class="f-icon">💬</div><h4>24/7 support</h4><p>Real humans ready to help, any time of day.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Reviews</span><h2>Loved by tech fans</h2></div>
+    <div class="testis">
+      <div class="card testi reveal"><div class="rating">★★★★★</div><p>Ordered the Nova X Pro on Monday and it arrived Tuesday. Camera is unreal and the price beat every other store.</p><div class="testi-user"><div class="avatar">A</div><div><strong>Ayesha K.</strong><small>Verified buyer</small></div></div></div>
+      <div class="card testi reveal"><div class="rating">★★★★★</div><p>The SonicWave headphones block out everything. Support even helped me pick the right model over chat.</p><div class="testi-user"><div class="avatar">H</div><div><strong>Hamza A.</strong><small>Verified buyer</small></div></div></div>
+      <div class="card testi reveal"><div class="rating">★★★★★</div><p>Smooth checkout, secure packaging and the AeroBook is a dream for editing. Will shop here again.</p><div class="testi-user"><div class="avatar">S</div><div><strong>Sara M.</strong><small>Verified buyer</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="newsletter reveal">
+      <span class="eyebrow">Newsletter</span>
+      <h2>Get 10% off your first order</h2>
+      <p class="muted">Join for launch news, exclusive deals and tech tips. No spam, ever.</p>
+      <form class="news-form" id="newsForm">
+        <input class="input" type="email" required placeholder="you@example.com" aria-label="Email address">
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

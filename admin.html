@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Panel — VoltEdge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<script src="app.js"></script>
+<script src="admin.js" defer></script>
+</head>
+<body data-page="admin" data-bare>
+
+<div class="admin">
+  <aside class="sidebar">
+    <a class="logo" href="index.html"><span class="logo-mark">⚡</span>Volt<b>Edge</b></a>
+    <button class="side-link active" data-tab="dashboard"><span class="em">📊</span>Dashboard</button>
+    <button class="side-link" data-tab="products"><span class="em">📦</span>Products</button>
+    <button class="side-link" data-tab="orders"><span class="em">🧾</span>Orders</button>
+    <button class="side-link" data-tab="users"><span class="em">👥</span>Customers</button>
+    <button class="side-link" data-tab="messages"><span class="em">💬</span>Messages</button>
+    <div class="side-foot">
+      <a class="btn btn-ghost btn-sm" href="index.html">← View store</a>
+      <button class="btn btn-danger btn-sm" id="adminLogout">Logout</button>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+    <div class="topbar">
+      <div><h1 id="pageTitle">Dashboard</h1><p id="welcome">Welcome back</p></div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <button class="icon-btn" data-theme-btn aria-label="Toggle dark mode"></button>
+        <div class="user-chip"><div class="avatar" id="adminAvatar">A</div><span id="adminName">Admin</span></div>
+      </div>
+    </div>
+
+    <!-- Dashboard -->
+    <section class="tab active" id="tab-dashboard">
+      <div class="kpis" id="kpis"></div>
+      <div class="charts">
+        <div class="card chart-card"><h3>Revenue (last 6 months)</h3><div class="chart-box"><canvas id="revChart"></canvas></div></div>
+        <div class="card chart-card"><h3>Units sold by category</h3><div class="chart-box"><canvas id="catChart"></canvas></div></div>
+      </div>
+      <div class="card table-card">
+        <div class="table-head"><h3>Recent orders</h3><button class="btn btn-ghost btn-sm" data-goto="orders">View all</button></div>
+        <div class="table-wrap"><table><thead><tr><th>Order</th><th>Customer</th><th>Date</th><th>Total</th><th>Status</th></tr></thead><tbody id="recentOrders"></tbody></table></div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="tab" id="tab-products">
+      <div class="card table-card">
+        <div class="table-head"><h3>Products</h3>
+          <div style="display:flex;gap:10px;flex-wrap:wrap"><input class="input" id="prodSearch" placeholder="Search products…" style="width:220px"><button class="btn btn-primary btn-sm" id="addProduct">+ Add product</button></div></div>
+        <div class="table-wrap"><table><thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Stock</th><th>Rating</th><th>Actions</th></tr></thead><tbody id="prodBody"></tbody></table></div>
+      </div>
+    </section>
+
+    <!-- Orders -->
+    <section class="tab" id="tab-orders">
+      <div class="card table-card">
+        <div class="table-head"><h3>All orders</h3>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <select class="select" id="orderFilter"><option value="all">All statuses</option><option>Pending</option><option>Processing</option><option>Shipped</option><option>Delivered</option><option>Cancelled</option></select>
+            <button class="btn btn-ghost btn-sm" id="exportOrders">⬇ Export CSV</button></div></div>
+        <div class="table-wrap"><table><thead><tr><th>Order</th><th>Customer</th><th>Items</th><th>Date</th><th>Total</th><th>Status</th></tr></thead><tbody id="orderBody"></tbody></table></div>
+      </div>
+    </section>
+
+    <!-- Users -->
+    <section class="tab" id="tab-users">
+      <div class="card table-card">
+        <div class="table-head"><h3>Customers &amp; admins</h3></div>
+        <div class="table-wrap"><table><thead><tr><th>User</th><th>Email</th><th>Role</th><th>Joined</th><th>Actions</th></tr></thead><tbody id="userBody"></tbody></table></div>
+      </div>
+    </section>
+
+    <!-- Messages -->
+    <section class="tab" id="tab-messages"><div id="msgList"></div></section>
+  </main>
+</div>
+
+</body>
+</html>

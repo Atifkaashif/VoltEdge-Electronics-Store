@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Create account — VoltEdge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="app.js"></script>
+</head>
+<body data-page="register">
+
+<div class="auth-wrap">
+  <aside class="auth-art">
+    <span class="eyebrow" style="background:rgba(255,255,255,.2);color:#fff;width:max-content;margin-bottom:18px">✨ Join VoltEdge</span>
+    <h2>Create your account and unlock member-only deals</h2>
+    <p>Track orders, save favourites and check out faster — plus 10% off your first purchase.</p>
+    <div class="auth-emojis" aria-hidden="true"><span>📱</span><span>🎧</span><span>💻</span></div>
+  </aside>
+  <div class="auth-form-side">
+    <div class="auth-card">
+      <h1>Create account</h1>
+      <p>It only takes a minute.</p>
+      <form id="regForm">
+        <div class="field"><label for="name">Full name</label><input class="input" id="name" name="name" required placeholder="Your full name" autocomplete="name"></div>
+        <div class="field"><label for="email">Email</label><input class="input" type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email"></div>
+        <div class="field"><label for="password">Password</label>
+          <div class="pw-wrap"><input class="input" type="password" id="password" name="password" required placeholder="Create a password" autocomplete="new-password">
+            <button type="button" class="pw-toggle" data-toggle-pw aria-label="Show password">👁</button></div>
+          <div class="strength"><i></i><i></i><i></i><i></i></div>
+          <div class="strength-label" id="strengthLabel">Use 6+ characters</div></div>
+        <div class="field"><label for="confirm">Confirm password</label><input class="input" type="password" id="confirm" name="confirm" required placeholder="Repeat password" autocomplete="new-password"></div>
+        <label class="check" style="margin-bottom:18px;font-size:.88rem"><input type="checkbox" required> I agree to the Terms &amp; Privacy Policy</label>
+        <button class="btn btn-primary btn-block" type="submit">Create account</button>
+      </form>
+      <p class="auth-alt">Already have an account? <a href="login.html">Log in</a></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

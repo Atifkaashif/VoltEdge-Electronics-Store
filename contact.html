@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact — VoltEdge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="app.js"></script>
+</head>
+<body data-page="contact">
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">💬 Get in touch</span>
+    <h1>We'd love to hear from you</h1>
+    <p>Questions about an order, a product or a partnership? Send us a message and we'll reply within 24 hours.</p>
+    <div class="crumbs"><a href="index.html">Home</a> / Contact</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container contact-grid">
+    <div class="card panel reveal">
+      <h3>Send us a message</h3>
+      <p class="muted" style="margin-bottom:24px">Fill in the form and our team will get back to you.</p>
+      <form id="contactForm">
+        <div class="form-grid">
+          <div class="field"><label for="name">Full name</label><input class="input" id="name" name="name" required placeholder="Your name"></div>
+          <div class="field"><label for="email">Email</label><input class="input" type="email" id="email" name="email" required placeholder="you@example.com"></div>
+        </div>
+        <div class="field"><label for="subject">Subject</label>
+          <select class="select" style="width:100%" id="subject" name="subject">
+            <option>Order enquiry</option><option>Product question</option><option>Returns &amp; warranty</option><option>Partnership</option><option>Other</option>
+          </select></div>
+        <div class="field"><label for="message">Message</label><textarea class="input" id="message" name="message" required placeholder="How can we help?"></textarea></div>
+        <button class="btn btn-primary btn-block" type="submit">Send message ✉️</button>
+      </form>
+    </div>
+    <div class="reveal">
+      <div class="card info-card"><div class="f-icon">📍</div><div><b>Visit our store</b><br><small>21 Tech Avenue, Gulberg III, Lahore</small></div></div>
+      <div class="card info-card"><div class="f-icon">📞</div><div><b>Call us</b><br><small>+92 300 123 4567</small></div></div>
+      <div class="card info-card"><div class="f-icon">✉️</div><div><b>Email us</b><br><small>hello@voltedge.com</small></div></div>
+      <div class="card info-card"><div class="f-icon">🕘</div><div><b>Opening hours</b><br><small>Mon–Sat 10am – 9pm · Sun closed</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container" style="max-width:800px">
+    <div class="section-head reveal"><span class="eyebrow">FAQ</span><h2>Quick answers</h2></div>
+    <div class="faq">
+      <details class="card reveal"><summary>How long does delivery take?</summary><p>Most orders arrive in 1–3 working days. Express delivery is free on orders over $50.</p></details>
+      <details class="card reveal"><summary>What is your return policy?</summary><p>You can return any unused product within 30 days for a full refund.</p></details>
+      <details class="card reveal"><summary>Are your products genuine?</summary><p>Yes. We source only from authorised distributors and every item includes a manufacturer warranty.</p></details>
+      <details class="card reveal"><summary>Can I track my order?</summary><p>Absolutely. You'll get a tracking link by email as soon as your order ships.</p></details>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
